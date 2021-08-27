@@ -7,9 +7,11 @@ function Pizza(size, toppings) {
   this.salesTax = 0.1;
 }
 
+//instantiate new object
 let order = new Pizza(1, "beef");
 console.log(order);
 
+//Set price based on size selection
 Pizza.prototype.selectSize = function(size) {
  if ( size === "small") {
     return this.price = 15;
@@ -22,6 +24,8 @@ Pizza.prototype.selectSize = function(size) {
   }
 }
 
+//Add $5 if less than 3 toppings
+//Add $10 for anything above 3 toppings
 Pizza.prototype.addToppings = function(toppings) {
   if ( toppings <= 3) {
      return this.price += 5;
@@ -31,7 +35,6 @@ Pizza.prototype.addToppings = function(toppings) {
      return false;
    }
 }
-
 
 Pizza.prototype.finalPrice = function() {
   //add sales tax to the order
