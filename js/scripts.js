@@ -3,7 +3,7 @@ function Pizza(size, toppings) {
   this.size = size;
   this.toppings = toppings;
   this.price = 0;
-  this.salesTax = 0.1;
+  //this.salesTax = 0.1;
 }
 
 //Set price based on size selection
@@ -34,10 +34,15 @@ Pizza.prototype.addToppings = function(toppingsNum) {
    }
 }
 
-Pizza.prototype.finalPrice = function() {
-  //add sales tax to the order
-  return this.price += (this.price * this.salesTax);
+Pizza.prototype.salesTax = function() {
+  this.price += this.price * 0.1;
+  //return num += num * 0.1;
 }
+
+// Pizza.prototype.finalPrice = function() {
+//   //add sales tax to the order
+//   this.price += this.salesTax;
+// }
 
  $(document).ready(function() {
   //attachContactListeners();    // <--- This line is new!
@@ -52,27 +57,28 @@ Pizza.prototype.finalPrice = function() {
     const inputtedSize = $('input:radio:checked').val();
     const inputtedToppingsNum = $('input:checkbox:checked').length;
     let order = new Pizza(inputtedSize, inputtedToppingsNum);
-    let toppingsNum = $('input:checkbox:checked').length;
     order.selectSize(inputtedSize);
-    order.addToppings(toppingsNum);
-    order.finalPrice()
+    order.addToppings(inputtedToppingsNum);
     
+    order.salesTax(order.price);
+    //order.finalPrice();
+    
+    //debugger;
 
     //write back to html
-    $(".total").html(order.finalPrice());
+    //$(".total").html(order.finalPrice());
     //debugger;
     //clear form input fields
     $("input#new-name").val("");
     $("input#new-email").val("");
     $('input:checkbox:checked').val("");
-    
+    //debugger;
     
     //test
     console.log(inputtedToppingsNum);
     console.log(order.price);
-    //console.log(order.selectSize("10"));
-    console.log(order.finalPrice());
-    debugger;
+    //console.log(order.finalPrice().toFixed(2));
+    //debugger;
   });
 });
 
