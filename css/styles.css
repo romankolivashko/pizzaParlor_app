@@ -1,12 +1,17 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+@import url('fonts.googleapis.com/css?family=Quicksand:300,500"');
+
+h1 {
+  color: bisque;
+}
 
 body {
   background: url("../img/pizza-bg4.jpg") center;
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
-  font-family: 'Italiana', serif;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
 }
 
 #show-order {
@@ -18,6 +23,8 @@ body {
 }
 
 .jumbotron {
+  /* background: url("../img/bricks-bg.jpg") center; */
+  background-color: #F1DABF;
   background-size: cover;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 2.5em;
