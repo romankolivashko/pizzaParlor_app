@@ -40,23 +40,42 @@ Pizza.prototype.finalPrice = function() {
   //add sales tax to the order
   return this.price += (this.price * this.salesTax);
 }
+
  
  console.log(order.selectSize("medium"));
  console.log(order.addToppings(4));
  console.log(order.finalPrice());
 
 
+ $(document).ready(function() {
+  //attachContactListeners();    // <--- This line is new!
+  $("form#new-order").submit(function(event) {
+    event.preventDefault();
 
+    //store contact details
+    const inputtedName = $("input#name").val();
+    const inputtedEmail = $("input#email").val();
 
+    //store pizza specs
+    const inputtedSize = $("input#pizza-size").val();
+    const inputtedToppingsNum = $("input#toppings")
+    const inputtedHomeAddress = $("input#new-home-address").val();
+    const inputtedWorkAddress = $("input#new-work-address").val();
+    
+    //get the number of toppings selected
+    let numberOfChecked = $('input:checkbox:checked').length;
+    console.log(numberOfChecked);
+    //clear form input fields
+    $("input#new-name").val("");
+    $("input#new-email").val("");
+  
+    let order = new Pizza(inputtedSize, inputtedToppingsNum);
+    // let newContact = new Contact(inputtedFirstName, inputtedLastName, inputtedPhoneNumber, inputtedEmail, inputtedHomeAddress, inputtedWorkAddress, allEmails);
 
-
-
-
-// let toppings = {
-//   meat: ["Beef", "Ham", "Bacon", "Chicken", "Sausage", "Pepperoni"], 
-//   veg: ["Onions", "Peppers", "Olives", "Tomatoes", "Pineapple"]
-// } 
-
+    // addressBook.addContact(newContact);
+    // displayContactDetails(addressBook);
+  });
+});
 
 
 

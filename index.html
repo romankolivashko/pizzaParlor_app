@@ -16,14 +16,14 @@
       <div class="col-md-6">
         <hr>
         <h2>Creaet new order:</h2>
-        <form id="new-contact">
+        <form id="new-order">
           <div class="form-group">
-            <label for="new-name">Your name</label>
-            <input type="text" class="form-control" id="new-name">
+            <label for="name">Your name</label>
+            <input type="text" class="form-control" id="name">
           </div>
           <div class="form-group">
-            <label for="new-email">Email</label>
-            <input type="text" class="form-control" id="new-email">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" id="email">
           </div>
 
           <div class="form-group">
@@ -50,45 +50,39 @@
 
               <h5>Meat toppings</h5>
               <div class="form-group">
-                <input type="checkbox" id="peperroni" name="peperroni" value="peperroni">
+                <input type="checkbox" id="topping" name="topping" value="peperroni">
                 <label for="peperroni"> Peperroni</label><br>
-                <input type="checkbox" id="sausage" name="sausage" value="sausage">
+                <input type="checkbox" id="topping" name="topping" value="sausage">
                 <label for="sausage"> Sausage</label><br>
-                <input type="checkbox" id="beef" name="beef" value="Beef">
+                <input type="checkbox" id="topping" name="topping" value="Beef">
                 <label for="beef"> Beef </label><br><br>
               </div>
 
 
               <h5>Non-meat</h5>
               <div class="form-group">
-                <input type="checkbox" id="peppers" name="peppers" value="peppers">
+                <input type="checkbox" id="topping" name="topping" value="peppers">
                 <label for="peppers"> Peppers</label><br>
-                <input type="checkbox" id="onions" name="Onions" value="Onions">
+                <input type="checkbox" id="topping" name="topping" value="Onions">
                 <label for="onions"> Onions</label><br>
-                <input type="checkbox" id="olives" name="Olives" value="Olives">
+                <input type="checkbox" id="topping" name="topping" value="Olives">
                 <label for="beef"> Olives </label><br>
-                <input type="checkbox" id="tomatoes" name="Tomatoes" value="Tomatoes">
+                <input type="checkbox" id="topping" name="topping" value="Tomatoes">
                 <label for="tomatoes"> Tomatoes </label><br>
-                <input type="checkbox" id="pineapple" name="Pineapple" value="Pineapple">
+                <input type="checkbox" id="topping" name="topping" value="Pineapple">
                 <label for="pineapple"> Pineapple </label><br><br>
               </div>
 
           <button type="submit" class="btn-primary">Order</button>
         </form>
         <hr>
-        <h2>Contacts:</h2>
-        <ul id="contacts">
-        </ul>
+
       </div>
       <div class="col-md-6">
-        <div id="show-contact">
-          <p>First Name: <span class="first-name"></span></p>
-          <p>Last Name: <span class="last-name"></span></p>
-          <p>Phone Number: <span class="phone-number"></span></p>
+        <div id="show-order">
+          <p>Name: <span class="new-name"></span></p>
           <p>Email: <span class="email"></span></p>
-          <p>Home Address: <span class="physicalHomeAddress"></span></p>
-          <p>Work Address: <span class="physicalWorkAddress"></span></p>
-          <div id="buttons">
+          <p>Your total: <span class="total"></span></p>
           </div>
         </div>
       </div>
