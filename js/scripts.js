@@ -1,4 +1,3 @@
-
 //Business Logic for pizza object
 function Pizza(size, toppings) {
   this.size = size;
@@ -7,18 +6,17 @@ function Pizza(size, toppings) {
   this.salesTax = 0.1;
 }
 
-//instantiate new object
-let order = new Pizza(1, "beef");
-console.log(order);
-
 //Set price based on size selection
 Pizza.prototype.selectSize = function(size) {
- if ( size === "small") {
-    return this.price = 15;
-  } else if ( size === "medium") {
-    return this.price = 20;
-  } else if ( size === "large") {
-    return this.price = 25;
+ if ( size === "10") {
+    this.price = 15;
+    //return this.price;
+  } else if ( size === "14") {
+    this.price = 20;
+    //return this.price = 20;
+  } else if ( size === "18") {
+    this.price = 25;
+    //return this.price;
   } else {
     return false;
   }
@@ -26,10 +24,10 @@ Pizza.prototype.selectSize = function(size) {
 
 //Add $5 if less than 3 toppings
 //Add $10 for anything above 3 toppings
-Pizza.prototype.addToppings = function(toppings) {
-  if ( toppings <= 3) {
+Pizza.prototype.addToppings = function(toppingsNum) {
+  if ( toppingsNum <= 3) {
      return this.price += 5;
-   } else if ( toppings > 3 ) {
+   } else if ( toppingsNum > 3 ) {
    return this.price += 10;
    } else {
      return false;
@@ -41,39 +39,40 @@ Pizza.prototype.finalPrice = function() {
   return this.price += (this.price * this.salesTax);
 }
 
- 
- console.log(order.selectSize("medium"));
- console.log(order.addToppings(4));
- console.log(order.finalPrice());
-
-
  $(document).ready(function() {
   //attachContactListeners();    // <--- This line is new!
   $("form#new-order").submit(function(event) {
     event.preventDefault();
-
+    
     //store contact details
     const inputtedName = $("input#name").val();
     const inputtedEmail = $("input#email").val();
 
     //store pizza specs
-    const inputtedSize = $("input#pizza-size").val();
-    const inputtedToppingsNum = $("input#toppings")
-    const inputtedHomeAddress = $("input#new-home-address").val();
-    const inputtedWorkAddress = $("input#new-work-address").val();
+    const inputtedSize = $('input:radio:checked').val();
+    const inputtedToppingsNum = $('input:checkbox:checked').length;
+    let order = new Pizza(inputtedSize, inputtedToppingsNum);
+    let toppingsNum = $('input:checkbox:checked').length;
+    order.selectSize(inputtedSize);
+    order.addToppings(toppingsNum);
+    order.finalPrice()
     
-    //get the number of toppings selected
-    let numberOfChecked = $('input:checkbox:checked').length;
-    console.log(numberOfChecked);
+
+    //write back to html
+    $(".total").html(order.finalPrice());
+    //debugger;
     //clear form input fields
     $("input#new-name").val("");
     $("input#new-email").val("");
-  
-    let order = new Pizza(inputtedSize, inputtedToppingsNum);
-    // let newContact = new Contact(inputtedFirstName, inputtedLastName, inputtedPhoneNumber, inputtedEmail, inputtedHomeAddress, inputtedWorkAddress, allEmails);
-
-    // addressBook.addContact(newContact);
-    // displayContactDetails(addressBook);
+    $('input:checkbox:checked').val("");
+    
+    
+    //test
+    console.log(inputtedToppingsNum);
+    console.log(order.price);
+    //console.log(order.selectSize("10"));
+    console.log(order.finalPrice());
+    debugger;
   });
 });
 
