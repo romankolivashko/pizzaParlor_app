@@ -22,8 +22,8 @@ _This is an applicaton that helps user choose one or more individual toppings (c
 |  **Case #1** |
 |---|
 | **Test:** Create a pizza order object constructor  |
-|  **Code:** let order = new Pizza(1, "beef"); |  
-|  **Expected Output:** Pizza { size: 1, toppings: 'beef' } |  
+|  **Code:** let order = new Pizza("medium", "beef"); |  
+|  **Expected Output:** Pizza { size: "medium", toppings: 'beef' } |  
 
 |  **Case #2** |
 |---|

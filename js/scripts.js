@@ -40,6 +40,8 @@ Pizza.prototype.salesTax = function() {
   //attachContactListeners();    // <--- This line is new!
   $("form#new-order").submit(function(event) {
     event.preventDefault();
+    $("#new-order").hide();
+    $("#show-order").show();
     //store contact details
     const inputtedName = $("input#name").val();
     const inputtedEmail = $("input#email").val();

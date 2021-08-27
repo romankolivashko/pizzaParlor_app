@@ -1,92 +1,80 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
 <head>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/jquery-3.6.0.js"></script>
   <script src="js/scripts.js"></script>
   <title>Pizza Pizza</title>
 </head>
-
 <body>
   <div class="container">
     <h1>Pizza Pizza</h1>
-    <div class="row">
-      <div class="col-md-6">
-        <hr>
+    <hr>
+    <form id="new-order">
+      <div class="jumbotron">
         <h2>Creaet new order:</h2>
-        <form id="new-order">
-          <div class="form-group">
-            <label for="name">Your name</label>
-            <input type="text" class="form-control" id="name" required>
+        <div class="form-group">
+          <label for="name">Your name</label>
+          <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text" class="form-control" id="email" required>
+        </div>
+        <div class="form-group">
+          <h5>Let's pick your pizza pie size</h5>
+          <div class="radio">
+            <label for="pizza-size">Small - 12 inch</label>
+            <input type="radio" name="pizza-size" value="10" checked>
+            </label>
           </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="text" class="form-control" id="email" required>
+          <div class="radio">
+            <label for="pizza-size">Medium - 14 inch</label>
+            <input type="radio" name="pizza-size" value="14">
+            </label>
           </div>
-
-          <div class="form-group">
-            <h5>Let's pick your pizza pie size</h5>
-            <div class="radio">
-              <label for="pizza-size">Small - 12 inch</label>
-              <input type="radio" name="pizza-size" value="10" checked>
-              </label>
-            </div>
-
-            <div class="radio">
-              <label for="pizza-size">Medium - 14 inch</label>
-              <input type="radio" name="pizza-size" value="14">
-              </label>
-            </div>
-
-            <div class="radio">
-              <label for="pizza-size">Large - 16 inch</label>
-              <input type="radio" name="pizza-size" value="18">
-              </label><br><br>
-            </div>
+          <div class="radio">
+            <label for="pizza-size">Large - 16 inch</label>
+            <input type="radio" name="pizza-size" value="18">
+            </label><br><br>
           </div>
-
-
-              <h5>Meat toppings</h5>
-              <div class="form-group">
-                <input type="checkbox" id="topping" name="topping" value="peperroni">
-                <label for="peperroni"> Peperroni</label><br>
-                <input type="checkbox" id="topping" name="topping" value="sausage">
-                <label for="sausage"> Sausage</label><br>
-                <input type="checkbox" id="topping" name="topping" value="Beef">
-                <label for="beef"> Beef </label><br><br>
-              </div>
-
-
-              <h5>Non-meat</h5>
-              <div class="form-group">
-                <input type="checkbox" id="topping" name="topping" value="peppers">
-                <label for="peppers"> Peppers</label><br>
-                <input type="checkbox" id="topping" name="topping" value="Onions">
-                <label for="onions"> Onions</label><br>
-                <input type="checkbox" id="topping" name="topping" value="Olives">
-                <label for="beef"> Olives </label><br>
-                <input type="checkbox" id="topping" name="topping" value="Tomatoes">
-                <label for="tomatoes"> Tomatoes </label><br>
-                <input type="checkbox" id="topping" name="topping" value="Pineapple">
-                <label for="pineapple"> Pineapple </label><br><br>
-              </div>
-
-          <button type="submit" class="btn-primary">Order</button>
-        </form>
-        <hr>
-
-      </div>
-      <div class="col-md-6">
-        <div id="show-order">
+        </div>
+        <h5>Meat toppings</h5>
+        <div class="form-group">
+          <input type="checkbox" id="topping" name="topping" value="peperroni">
+          <label for="peperroni"> Peperroni</label><br>
+          <input type="checkbox" id="topping" name="topping" value="sausage">
+          <label for="sausage"> Sausage</label><br>
+          <input type="checkbox" id="topping" name="topping" value="Beef">
+          <label for="beef"> Beef </label><br><br>
+        </div>
+        <h5>Non-meat</h5>
+        <div class="form-group">
+          <input type="checkbox" id="topping" name="topping" value="peppers">
+          <label for="peppers"> Peppers</label><br>
+          <input type="checkbox" id="topping" name="topping" value="Onions">
+          <label for="onions"> Onions</label><br>
+          <input type="checkbox" id="topping" name="topping" value="Olives">
+          <label for="beef"> Olives </label><br>
+          <input type="checkbox" id="topping" name="topping" value="Tomatoes">
+          <label for="tomatoes"> Tomatoes </label><br>
+          <input type="checkbox" id="topping" name="topping" value="Pineapple">
+          <label for="pineapple"> Pineapple </label><br><br>
+        </div>
+        <button type="submit" class="btn-primary">Order</button>
+        </div>
+    </form>
+    <div id="show-order">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
           <h3>Order summary:</h3>
           <p>Name: <span class="name"></span></p>
           <p>Email: <span class="email"></span></p>
           <p>Pizza size: <span class="pizza-size"></span></p>
           <p>Number of toppings: <span class="toppings"></span></p>
           <p>Your total: <span class="total"></span></p>
-          </div>
+          <a href="#" class="btn btn-primary">Order more!</a>
         </div>
       </div>
     </div>

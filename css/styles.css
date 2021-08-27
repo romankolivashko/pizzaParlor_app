@@ -1,15 +1,35 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
 
-/* .row {
-  background-color: bg-secondary;
-  color: text-white;
-} */
+body {
+  background: url("../img/pizza-bg4.jpg") center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Italiana', serif;
+}
+
+#show-order {
+  display: none;
+}
+
+#new-order {
+  display: block;
+}
+
+.jumbotron {
+  background-size: cover;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 2.5em;
+}
+
+.container {
+  max-width: 700px;
+  margin-left: 150px;
+  margin-top: 0px;
+  padding-top: 1em;
+}
 
 .btn {
   margin: 7px;
-}
-
-.td-veggies {
-  /* margin: 20px; */
-  padding-left: 30px;
 }
