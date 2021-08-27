@@ -19,11 +19,11 @@
         <form id="new-order">
           <div class="form-group">
             <label for="name">Your name</label>
-            <input type="text" class="form-control" id="name">
+            <input type="text" class="form-control" id="name" required>
           </div>
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="text" class="form-control" id="email">
+            <input type="text" class="form-control" id="email" required>
           </div>
 
           <div class="form-group">
@@ -80,8 +80,11 @@
       </div>
       <div class="col-md-6">
         <div id="show-order">
+          <h3>Order summary:</h3>
           <p>Name: <span class="name"></span></p>
           <p>Email: <span class="email"></span></p>
+          <p>Pizza size: <span class="pizza-size"></span></p>
+          <p>Number of toppings: <span class="toppings"></span></p>
           <p>Your total: <span class="total"></span></p>
           </div>
         </div>

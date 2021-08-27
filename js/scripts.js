@@ -6,7 +6,6 @@ function Pizza(size, toppings) {
   //this.salesTax = 0.1;
 }
 
-//Set price based on size selection
 Pizza.prototype.selectSize = function(size) {
  if ( size === "10") {
     this.price = 15;
@@ -22,8 +21,6 @@ Pizza.prototype.selectSize = function(size) {
   }
 }
 
-//Add $5 if less than 3 toppings
-//Add $10 for anything above 3 toppings
 Pizza.prototype.addToppings = function(toppingsNum) {
   if ( toppingsNum <= 3) {
      return this.price += 5;
@@ -36,49 +33,34 @@ Pizza.prototype.addToppings = function(toppingsNum) {
 
 Pizza.prototype.salesTax = function() {
   this.price += this.price * 0.1;
-  //return num += num * 0.1;
 }
 
-// Pizza.prototype.finalPrice = function() {
-//   //add sales tax to the order
-//   this.price += this.salesTax;
-// }
-
+//UI Logic
  $(document).ready(function() {
   //attachContactListeners();    // <--- This line is new!
   $("form#new-order").submit(function(event) {
     event.preventDefault();
-    
     //store contact details
     const inputtedName = $("input#name").val();
     const inputtedEmail = $("input#email").val();
-
     //store pizza specs
     const inputtedSize = $('input:radio:checked').val();
     const inputtedToppingsNum = $('input:checkbox:checked').length;
+    //main function implementation
     let order = new Pizza(inputtedSize, inputtedToppingsNum);
     order.selectSize(inputtedSize);
     order.addToppings(inputtedToppingsNum);
-    
     order.salesTax(order.price);
-    //order.finalPrice();
-    
-    //debugger;
-
     //write back to html
-    //$(".total").html(order.finalPrice());
-    //debugger;
+    $(".total").html(order.price.toFixed(2)); //toFixed() not required but will be needed if prices change
+    $(".name").html(inputtedName);
+    $(".email").html(inputtedEmail);
+    $(".pizza-size").html(inputtedSize);
+    $(".toppings").html(inputtedToppingsNum.toFixed(0)); 
     //clear form input fields
     $("input#new-name").val("");
     $("input#new-email").val("");
     $('input:checkbox:checked').val("");
-    //debugger;
-    
-    //test
-    console.log(inputtedToppingsNum);
-    console.log(order.price);
-    //console.log(order.finalPrice().toFixed(2));
-    //debugger;
   });
 });
 
