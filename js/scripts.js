@@ -1,3 +1,52 @@
+
+//Create super class
+function PizzaOrder(size, toppings) {
+  this.size = size; 
+  this.toppings = toppings;
+}
+
+PizzaOrder.prototype.selectSize = function() {
+  this.size = { 
+    small: 10, 
+    medium: 12, 
+    large: 15, 
+    xLarge: 20
+  }
+}
+
+PizzaOrder.prototype.addToppings = function() {
+  this.toppings = {
+    meat: ["Beef", "Ham", "Bacon", "Chicken", "Sausage", "Pepperoni"], 
+    veg: ["Onions", "Peppers", "Olives", "Tomatoes", "Pineapple"]
+  } 
+}
+
+let pizza = new PizzaOrder;
+
+console.log(pizza.selectSize[1])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // $(document).ready(function() {
 //   $(".content").click(function() {
 //     $(".card-showing").toggle();

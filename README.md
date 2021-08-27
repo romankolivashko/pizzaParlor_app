@@ -21,7 +21,7 @@ _This is an applicaton that helps user choose one or more individual toppings (c
 
 |  **Case #1** |
 |---|
-| **Test:** Create a new pizza order object constructor  |
+| **Test:** Create a pizza order object constructor  |
 |  **Code:** [] |  
 |  **Expected Output:** [] |  
 
