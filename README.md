@@ -40,7 +40,7 @@ _This is an applicaton that helps user choose one or more individual toppings (c
 |  **Case #4** |
 |---|
 | **Test:** Create prototype method to determin final price |
-|  **Code:** order.selectSize("medium") + order.addToppings(4) |  
+|  **Code:** (order.selectSize("medium") + order.addToppings(4)) + 10% tax |  
 |  **Expected Output:** 33 | 
 
 ## Setup/Installation Requirements

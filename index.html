@@ -1,22 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
+
 <head>
-  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="js/jquery-3.6.0.js"></script>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/scripts.js"></script>
-  <title>Change Me!</title>
+  <title>Pizza Pizza</title>
 </head>
+
 <body>
-  <h3>Change Me!</h3>
-  <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-      <h1 class="display-5">Change Me!</h1>
-      <p class="lead">This is a sentence that occupies the entire horizontal space of its parent.</p>
+  <div class="container">
+    <h1>Pizza Pizza</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <hr>
+        <h2>Creaet new order:</h2>
+        <form id="new-contact">
+          <div class="form-group">
+            <label for="new-name">Your name</label>
+            <input type="text" class="form-control" id="new-name">
+          </div>
+          <div class="form-group">
+            <label for="new-email">Email</label>
+            <input type="text" class="form-control" id="new-email">
+          </div>
+
+          <div class="form-group">
+            <h5>Let's pick your pizza pie size</h5>
+            <div class="radio">
+              <label for="pizza-size">Small - 12 inch</label>
+              <input type="radio" name="pizza-size" value="Small" checked>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label for="pizza-size">Medium - 14 inch</label>
+              <input type="radio" name="pizza-size" value="Medium">
+              </label>
+            </div>
+
+            <div class="radio">
+              <label for="pizza-size">Large - 16 inch</label>
+              <input type="radio" name="pizza-size" value="Large">
+              </label><br><br>
+            </div>
+          </div>
+
+
+              <h5>Meat toppings</h5>
+              <div class="form-group">
+                <input type="checkbox" id="peperroni" name="peperroni" value="peperroni">
+                <label for="peperroni"> Peperroni</label><br>
+                <input type="checkbox" id="sausage" name="sausage" value="sausage">
+                <label for="sausage"> Sausage</label><br>
+                <input type="checkbox" id="beef" name="beef" value="Beef">
+                <label for="beef"> Beef </label><br><br>
+              </div>
+
+
+              <h5>Non-meat</h5>
+              <div class="form-group">
+                <input type="checkbox" id="peppers" name="peppers" value="peppers">
+                <label for="peppers"> Peppers</label><br>
+                <input type="checkbox" id="onions" name="Onions" value="Onions">
+                <label for="onions"> Onions</label><br>
+                <input type="checkbox" id="olives" name="Olives" value="Olives">
+                <label for="beef"> Olives </label><br>
+                <input type="checkbox" id="tomatoes" name="Tomatoes" value="Tomatoes">
+                <label for="tomatoes"> Tomatoes </label><br>
+                <input type="checkbox" id="pineapple" name="Pineapple" value="Pineapple">
+                <label for="pineapple"> Pineapple </label><br><br>
+              </div>
+
+          <button type="submit" class="btn-primary">Order</button>
+        </form>
+        <hr>
+        <h2>Contacts:</h2>
+        <ul id="contacts">
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <div id="show-contact">
+          <p>First Name: <span class="first-name"></span></p>
+          <p>Last Name: <span class="last-name"></span></p>
+          <p>Phone Number: <span class="phone-number"></span></p>
+          <p>Email: <span class="email"></span></p>
+          <p>Home Address: <span class="physicalHomeAddress"></span></p>
+          <p>Work Address: <span class="physicalWorkAddress"></span></p>
+          <div id="buttons">
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  
-<p> Some text goes here</p>
-
 </body>
+
 </html>
