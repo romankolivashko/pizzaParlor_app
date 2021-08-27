@@ -1,29 +1,42 @@
 
-//Create super class
-function PizzaOrder(size, toppings) {
-  this.size = size; 
+//Business Logic for pizza object
+function Pizza(size, toppings) {
+  this.size = size;
   this.toppings = toppings;
 }
 
-PizzaOrder.prototype.selectSize = function() {
-  this.size = { 
-    small: 10, 
-    medium: 12, 
-    large: 15, 
-    xLarge: 20
+let order = new Pizza(1, "beef");
+console.log(order);
+
+Pizza.prototype.selectSize = function(size) {
+ if ( size === "small") {
+    return this.size = 10;
+  } else if ( size === "medium") {
+    return this.size = 12;
+  } else if ( size === "large") {
+    return this.size = 15;
+  } else {
+    return false;
   }
 }
 
-PizzaOrder.prototype.addToppings = function() {
-  this.toppings = {
-    meat: ["Beef", "Ham", "Bacon", "Chicken", "Sausage", "Pepperoni"], 
-    veg: ["Onions", "Peppers", "Olives", "Tomatoes", "Pineapple"]
-  } 
-}
+console.log(order.selectSize("medium"));
 
-let pizza = new PizzaOrder;
+ 
 
-console.log(pizza.selectSize[1])
+
+
+
+
+
+
+
+// let toppings = {
+//   meat: ["Beef", "Ham", "Bacon", "Chicken", "Sausage", "Pepperoni"], 
+//   veg: ["Onions", "Peppers", "Olives", "Tomatoes", "Pineapple"]
+// } 
+
+
 
 
 

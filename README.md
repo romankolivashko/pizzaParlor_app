@@ -22,14 +22,14 @@ _This is an applicaton that helps user choose one or more individual toppings (c
 |  **Case #1** |
 |---|
 | **Test:** Create a pizza order object constructor  |
-|  **Code:** [] |  
-|  **Expected Output:** [] |  
+|  **Code:** let order = new Pizza(1, "beef"); |  
+|  **Expected Output:** Pizza { size: 1, toppings: 'beef' } |  
 
 |  **Case #2** |
 |---|
 | **Test:** Create prototype method to select size |
-|  **Code:** [] |  
-|  **Expected Output:** [] | 
+|  **Code:** order.selectSize("medium") |  
+|  **Expected Output:** 12 | 
 
 |  **Case #3** |
 |---|
