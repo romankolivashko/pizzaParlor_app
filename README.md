@@ -34,14 +34,14 @@ _This is an applicaton that helps user choose one or more individual toppings (c
 |  **Case #3** |
 |---|
 | **Test:** Create prototype method to add toppings |
-|  **Code:** [] |  
-|  **Expected Output:** [] | 
+|  **Code:** if (toppings > 3) |  
+|  **Expected Output:** this.price += 10; | 
 
 |  **Case #4** |
 |---|
 | **Test:** Create prototype method to determin final price |
-|  **Code:** [] |  
-|  **Expected Output:** [] | 
+|  **Code:** order.selectSize("medium") + order.addToppings(4) |  
+|  **Expected Output:** 33 | 
 
 ## Setup/Installation Requirements
 

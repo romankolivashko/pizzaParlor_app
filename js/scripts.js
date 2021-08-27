@@ -4,6 +4,7 @@ function Pizza(size, toppings) {
   this.size = size;
   this.toppings = toppings;
   this.price = 0;
+  this.salesTax = 0.1;
 }
 
 let order = new Pizza(1, "beef");
@@ -30,9 +31,16 @@ Pizza.prototype.addToppings = function(toppings) {
      return false;
    }
 }
+
+
+Pizza.prototype.finalPrice = function() {
+  //add sales tax to the order
+  return this.price += (this.price * this.salesTax);
+}
  
  console.log(order.selectSize("medium"));
  console.log(order.addToppings(4));
+ console.log(order.finalPrice());
 
 
 
