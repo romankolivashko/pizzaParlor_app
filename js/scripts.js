@@ -3,6 +3,7 @@
 function Pizza(size, toppings) {
   this.size = size;
   this.toppings = toppings;
+  this.price = 0;
 }
 
 let order = new Pizza(1, "beef");
@@ -10,19 +11,28 @@ console.log(order);
 
 Pizza.prototype.selectSize = function(size) {
  if ( size === "small") {
-    return this.size = 10;
+    return this.price = 15;
   } else if ( size === "medium") {
-    return this.size = 12;
+    return this.price = 20;
   } else if ( size === "large") {
-    return this.size = 15;
+    return this.price = 25;
   } else {
     return false;
   }
 }
 
-console.log(order.selectSize("medium"));
-
+Pizza.prototype.addToppings = function(toppings) {
+  if ( toppings <= 3) {
+     return this.price += 5;
+   } else if ( toppings > 3 ) {
+   return this.price += 10;
+   } else {
+     return false;
+   }
+}
  
+ console.log(order.selectSize("medium"));
+ console.log(order.addToppings(4));
 
 
 
