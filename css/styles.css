@@ -1,8 +1,14 @@
 
 @import url('fonts.googleapis.com/css?family=Quicksand:300,500"');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
 h1 {
   color: bisque;
+  font-weight: 500;
+}
+
+h5 {
+  margin-top: 30px;
 }
 
 body {
@@ -10,8 +16,12 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Special Elite', cursive;
+  /* font-family: 'Quicksand', sans-serif; */
+  margin-top: 1%;
+  font-size: 18px;
   font-weight: 600;
+  color: rgb(73, 53, 29);
 }
 
 #show-order {
@@ -22,8 +32,14 @@ body {
   display: block;
 }
 
+.card {
+  background: url("../img/paper-bg-confirm.jpg") center;
+  padding: 3rem;
+}
+
 .jumbotron {
-  /* background: url("../img/bricks-bg.jpg") center; */
+  background: url("../img/paper-bg2.jpg") center; 
+  /* background: url("../img/paper-bg2.jpg") center;  */
   background-color: #F1DABF;
   background-size: cover;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -32,11 +48,14 @@ body {
 
 .container {
   max-width: 700px;
-  margin-left: 150px;
+  margin-left: 20%;
   margin-top: 0px;
-  padding-top: 1em;
 }
 
 .btn {
   margin: 7px;
+}
+
+.radio {
+  margin: 5px 0;
 }
