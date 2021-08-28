@@ -37,7 +37,6 @@ Pizza.prototype.salesTax = function() {
 
 //UI Logic
  $(document).ready(function() {
-  //attachContactListeners();    // <--- This line is new!
   $("form#new-order").submit(function(event) {
     event.preventDefault();
     $("#new-order").hide();
@@ -58,11 +57,12 @@ Pizza.prototype.salesTax = function() {
     $(".name").html(inputtedName);
     $(".email").html(inputtedEmail);
     $(".pizza-size").html(inputtedSize);
-    $(".toppings").html(inputtedToppingsNum.toFixed(0)); 
+    $(".toppings").html(inputtedToppingsNum); 
     //clear form input fields
     $("input#new-name").val("");
     $("input#new-email").val("");
     $('input:checkbox:checked').val("");
+    //debugger;
   });
 });
 
