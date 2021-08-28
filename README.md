@@ -49,7 +49,7 @@ _This is an applicaton that helps user choose one or more individual toppings (c
 * _Open `index.html` file in browser._
 
 ## How to access the app from the web
-* _Follow the link [here](https://romankolivashko.github.io/app_name/)_ 
+* _Follow the link [here](https://romankolivashko.github.io/pizzaParlor_app/)_ 
 
 ## Known Bugs
 
