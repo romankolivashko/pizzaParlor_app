@@ -52,7 +52,6 @@ Contact.prototype.fullName = function() {
  $(document).ready(function() {
   $("form#new-order").submit(function(event) {
     event.preventDefault();
-    
     $("#new-order").hide();
     $("#show-order").show();
     //store contact details
