@@ -48,27 +48,11 @@ Contact.prototype.fullName = function() {
   return fullNameToCap.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
 }
 
-Contact.prototype.isEmail = function () {
-  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-  return regex.test(email);
-}
-
-function isEmail(email) {
-  let regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-  if ( regex.test(email) === false) {
-    return "Please enter valida email";
-  } else {
-    return email;
-  };
-}
-
-
-//let emailOut = isEmail(inputtedEmail);
-
 //UI Logic
  $(document).ready(function() {
   $("form#new-order").submit(function(event) {
     event.preventDefault();
+    
     $("#new-order").hide();
     $("#show-order").show();
     //store contact details
@@ -81,14 +65,12 @@ function isEmail(email) {
     //main function implementation
     let contact = new Contact(inputtedFirstName, inputtedLastName, inputtedEmail);
     let order = new Pizza(inputtedSize, inputtedToppingsNum);
-    //let email = new Contact(email);
-    let validEmail = isEmail(inputtedEmail);
     order.selectSize(inputtedSize);
     order.addToppings(inputtedToppingsNum);
     order.salesTax(order.price);
     //write back to html
     $(".name").html(contact.fullName(contact));
-    $(".email").html(validEmail);
+    $(".email").html(inputtedEmail);
     $(".pizza-size").html(inputtedSize);
     $(".toppings").html(inputtedToppingsNum); 
     $(".total").html(order.price.toFixed(2)); //toFixed() not required but will be needed if prices change
