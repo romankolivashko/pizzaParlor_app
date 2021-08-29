@@ -54,11 +54,12 @@
           </label><br><br>
         </div>
       </div>
-      <h4>Every pie will come with cheese if no toppings selected.</h4>
-<h4>Up to 3 toppings + $5, more than 3 + add $10</h4>
+      <h4>Every pie will come at least with cheese if no toppings selected.</h4>
+<h4>Up to 3 toppings + $5, more than 3 + add $10:</h4>
+<div id="toppings-box">
       <div class="row">
         <div class="col-sm-6">
-          <h5>Meat toppings</h5>
+          <h5><u>Meat toppings</u></h5>
           <div class="form-group">
             <input type="checkbox" id="topping" name="topping" value="peperroni">
             <label for="peperroni"> Peperroni</label><br>
@@ -73,7 +74,7 @@
           </div>
         </div>
         <div class="col-sm-6">
-          <h5>Non-meat</h5>
+          <h5><u>Non-meat</u></h5>
           <div class="form-group">
             <input type="checkbox" id="topping" name="topping" value="peppers">
             <label for="peppers"> Peppers</label><br>
@@ -90,6 +91,7 @@
         <button type="submit" class="btn-primary">Order Now</button>
       </div>
   </div>
+</div>
   </form>
   <div id="show-order">
     <div class="card" style="width: 25rem;">
