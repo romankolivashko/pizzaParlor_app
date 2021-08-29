@@ -24,7 +24,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   font-family: 'Special Elite', cursive;
-  /* font-family: 'Quicksand', sans-serif; */
   margin-top: 1%;
   font-size: 18px;
   font-weight: 600;
@@ -79,3 +78,31 @@ body {
 #inner-comment {
   margin-bottom: -1.5em;
 }
+
+.bi {
+  width: 4em;
+  height: 2em;
+}
+
+ul.ba {
+  list-style-type: none;
+  position: absolute;
+  left: 88%;
+  top: 10%;
+}
+
+li {
+  margin: 10px;
+  padding: 0.2em;
+}
+
+
+a {
+  color: #ebe3eb;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: bisque !important;
+}
+
