@@ -1,4 +1,4 @@
-//Business Logic for pizza object
+//Business Logic for Pizza object
 function Pizza(size, toppings) {
   this.size = size;
   this.toppings = toppings;
@@ -35,6 +35,24 @@ Pizza.prototype.salesTax = function() {
   this.price += this.price * 0.1;
 }
 
+//Business logic for Contact object
+function Contact(fName, lName, email) {
+  this.fName = fName;
+  this.lName = lName;
+  this.email = email;
+}
+
+//Capitalize and put both names together
+Contact.prototype.fullName = function() {
+  let fullNameToCap = this.fName + " " + this.lName;
+  return fullNameToCap.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+}
+
+Contact.prototype.isEmail = function() {
+  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  return regex.test(email);
+}
+
 //UI Logic
  $(document).ready(function() {
   $("form#new-order").submit(function(event) {
@@ -42,27 +60,29 @@ Pizza.prototype.salesTax = function() {
     $("#new-order").hide();
     $("#show-order").show();
     //store contact details
-    const inputtedName = $("input#name").val();
+    const inputtedFirstName = $("input#firstName").val();
+    const inputtedLastName = $("input#lastName").val();
     const inputtedEmail = $("input#email").val();
     //store pizza specs
     const inputtedSize = $('input:radio:checked').val();
     const inputtedToppingsNum = $('input:checkbox:checked').length;
     //main function implementation
+    let contact = new Contact(inputtedFirstName, inputtedLastName, inputtedEmail);
     let order = new Pizza(inputtedSize, inputtedToppingsNum);
     order.selectSize(inputtedSize);
     order.addToppings(inputtedToppingsNum);
     order.salesTax(order.price);
     //write back to html
-    $(".total").html(order.price.toFixed(2)); //toFixed() not required but will be needed if prices change
-    $(".name").html(inputtedName);
-    $(".email").html(inputtedEmail);
+    $(".name").html(contact.fullName(contact));
+    $(".email").html(contact.isEmail(email));
     $(".pizza-size").html(inputtedSize);
     $(".toppings").html(inputtedToppingsNum); 
+    $(".total").html(order.price.toFixed(2)); //toFixed() not required but will be needed if prices change
     //clear form input fields
-    $("input#new-name").val("");
-    $("input#new-email").val("");
+    $("input#firstName").val("");
+    $("input#lastName").val("");
+    $("input#email").val("");
     $('input:checkbox:checked').val("");
-    //debugger;
   });
 });
 

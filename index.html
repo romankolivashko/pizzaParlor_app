@@ -17,35 +17,27 @@
       <div class="jumbotron">
         <h2>Creaet your order:</h2>
         <div class="form-group">
-
+          <div id="full-name">
           <div class="row">
             <div class="col">
-              <label for="name">First name</label>
-              <input type="text" class="form-control" id="name" required>
+              <label for="firstName">First name</label>
+              <input type="text" class="form-control" id="firstName" required>
             </div>
          
 
           <div class="col">
-            <label for="name">Last name</label>
-            <input type="text" class="form-control" id="name" required>
+            <label for="lastName">Last name</label>
+            <input type="text" class="form-control" id="lastName" required>
           </div>
         </div>
       </div>
-      
-
-
-      <!-- <label for="name">Your name</label>
-          <input type="text" class="form-control" id="name" required>
-        </div> -->
-
-
-
+    </div>
       <div class="form-group">
         <label for="email">Email</label>
         <input type="text" class="form-control" id="email" required>
       </div>
       <div class="form-group">
-        <h5>Let's pick your pizza pie size</h5>
+        <h4>Let's pick your pizza pie size:</h4>
         <div class="radio">
           <input type="radio" name="pizza-size" value="Small" checked>
           <label for="pizza-size">Small - $15</label>
@@ -62,7 +54,7 @@
           </label><br><br>
         </div>
       </div>
-
+<h4>Up to 3 toppings + $5, more than 3 + add $10</h4>
       <div class="row">
         <div class="col-sm-6">
           <h5>Meat toppings</h5>
@@ -73,7 +65,6 @@
             <label for="sausage"> Sausage</label><br>
             <input type="checkbox" id="topping" name="topping" value="Beef">
             <label for="beef"> Beef </label><br>
-
             <input type="checkbox" id="topping" name="topping" value="Bacon">
             <label for="bacon"> Bacon </label><br>
             <input type="checkbox" id="topping" name="topping" value="Chicken">
@@ -99,7 +90,6 @@
       </div>
   </div>
   </form>
-
   <div id="show-order">
     <div class="card" style="width: 25rem;">
       <div class="card-body">
