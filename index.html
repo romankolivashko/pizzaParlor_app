@@ -18,94 +18,94 @@
         <h2>Creaet your order:</h2>
         <div class="form-group">
           <div id="full-name">
-          <div class="row">
-            <div class="col">
-              <label for="firstName">First name</label>
-              <input type="text" class="form-control" id="firstName" required>
+            <div class="row">
+              <div class="col">
+                <label for="firstName">First name</label>
+                <input type="text" class="form-control" id="firstName" required>
+              </div>
+              <div class="col">
+                <label for="lastName">Last name</label>
+                <input type="text" class="form-control" id="lastName" required>
+              </div>
             </div>
-         
-
-          <div class="col">
-            <label for="lastName">Last name</label>
-            <input type="text" class="form-control" id="lastName" required>
           </div>
+        </div>
+        <div id="inner-comment">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" id="email" required>
+          </div>
+          <div class="form-group">
+            <h4>Let's pick your pizza pie size:</h4>
+            <div class="radio">
+              <input type="radio" name="pizza-size" value="Small" checked>
+              <label for="pizza-size">Small - $15</label>
+              </label>
+            </div>
+            <div class="radio">
+              <input type="radio" name="pizza-size" value="Medium">
+              <label for="pizza-size">Medium - $20</label>
+              </label>
+            </div>
+            <div class="radio">
+              <input type="radio" name="pizza-size" value="Large">
+              <label for="pizza-size">Large - $25</label>
+              </label><br><br>
+            </div>
+          </div>
+        </div>
+        <h4>Every pie comes with cheese if no toppings selected.</h4>
+        <h4>Up to 3 toppings + $5, more than 3 + add $10:</h4>
+        <div id="toppings-box">
+          <div class="row">
+            <div class="col-sm-6">
+              <h5><u>Meat toppings</u></h5>
+              <div class="form-group">
+                <input type="checkbox" id="topping" name="topping" value="peperroni">
+                <label for="peperroni"> Peperroni</label><br>
+                <input type="checkbox" id="topping" name="topping" value="sausage">
+                <label for="sausage"> Sausage</label><br>
+                <input type="checkbox" id="topping" name="topping" value="Beef">
+                <label for="beef"> Beef </label><br>
+                <input type="checkbox" id="topping" name="topping" value="Bacon">
+                <label for="bacon"> Bacon </label><br>
+                <input type="checkbox" id="topping" name="topping" value="Chicken">
+                <label for="chicken"> Chicken </label><br><br>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <h5><u>Non-meat</u></h5>
+              <div class="form-group">
+                <input type="checkbox" id="topping" name="topping" value="peppers">
+                <label for="peppers"> Peppers</label><br>
+                <input type="checkbox" id="topping" name="topping" value="Onions">
+                <label for="onions"> Onions</label><br>
+                <input type="checkbox" id="topping" name="topping" value="Olives">
+                <label for="beef"> Olives </label><br>
+                <input type="checkbox" id="topping" name="topping" value="Tomatoes">
+                <label for="tomatoes"> Tomatoes </label><br>
+                <input type="checkbox" id="topping" name="topping" value="Pineapple">
+                <label for="pineapple"> Pineapple </label><br><br>
+              </div>
+            </div>
+            <button type="submit" class="btn-primary">Order Now</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div id="show-order">
+      <div class="card" style="width: 25rem;">
+        <div class="card-body">
+          <h3><u>Order summary:</u></h3><br>
+          <p>Name: <span class="name"></span></p>
+          <p>Email: <span class="email"></span></p>
+          <p>Pizza size: <span class="pizza-size"></span></p>
+          <p>Number of toppings: <span class="toppings"></span></p>
+          <p>Your total: <span class="total"></span></p>
+          <a href="https://romankolivashko.github.io/pizzaParlor_app/" class="btn btn-primary">Place another order!</a>
         </div>
       </div>
     </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="text" class="form-control" id="email" required>
-      </div>
-      <div class="form-group">
-        <h4>Let's pick your pizza pie size:</h4>
-        <div class="radio">
-          <input type="radio" name="pizza-size" value="Small" checked>
-          <label for="pizza-size">Small - $15</label>
-          </label>
-        </div>
-        <div class="radio">
-          <input type="radio" name="pizza-size" value="Medium">
-          <label for="pizza-size">Medium - $20</label>
-          </label>
-        </div>
-        <div class="radio">
-          <input type="radio" name="pizza-size" value="Large">
-          <label for="pizza-size">Large - $25</label>
-          </label><br><br>
-        </div>
-      </div>
-      <h4>Every pie will come at least with cheese if no toppings selected.</h4>
-<h4>Up to 3 toppings + $5, more than 3 + add $10:</h4>
-<div id="toppings-box">
-      <div class="row">
-        <div class="col-sm-6">
-          <h5><u>Meat toppings</u></h5>
-          <div class="form-group">
-            <input type="checkbox" id="topping" name="topping" value="peperroni">
-            <label for="peperroni"> Peperroni</label><br>
-            <input type="checkbox" id="topping" name="topping" value="sausage">
-            <label for="sausage"> Sausage</label><br>
-            <input type="checkbox" id="topping" name="topping" value="Beef">
-            <label for="beef"> Beef </label><br>
-            <input type="checkbox" id="topping" name="topping" value="Bacon">
-            <label for="bacon"> Bacon </label><br>
-            <input type="checkbox" id="topping" name="topping" value="Chicken">
-            <label for="chicken"> Chicken </label><br><br>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <h5><u>Non-meat</u></h5>
-          <div class="form-group">
-            <input type="checkbox" id="topping" name="topping" value="peppers">
-            <label for="peppers"> Peppers</label><br>
-            <input type="checkbox" id="topping" name="topping" value="Onions">
-            <label for="onions"> Onions</label><br>
-            <input type="checkbox" id="topping" name="topping" value="Olives">
-            <label for="beef"> Olives </label><br>
-            <input type="checkbox" id="topping" name="topping" value="Tomatoes">
-            <label for="tomatoes"> Tomatoes </label><br>
-            <input type="checkbox" id="topping" name="topping" value="Pineapple">
-            <label for="pineapple"> Pineapple </label><br><br>
-          </div>
-        </div>
-        <button type="submit" class="btn-primary">Order Now</button>
-      </div>
-  </div>
-</div>
-  </form>
-  <div id="show-order">
-    <div class="card" style="width: 25rem;">
-      <div class="card-body">
-        <h3><u>Order summary:</u></h3><br>
-        <p>Name: <span class="name"></span></p>
-        <p>Email: <span class="email"></span></p>
-        <p>Pizza size: <span class="pizza-size"></span></p>
-        <p>Number of toppings: <span class="toppings"></span></p>
-        <p>Your total: <span class="total"></span></p>
-        <a href="https://romankolivashko.github.io/pizzaParlor_app/" class="btn btn-primary">Place another order!</a>
-      </div>
-    </div>
-  </div>
   </div>
 </body>
 

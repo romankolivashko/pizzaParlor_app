@@ -5,6 +5,10 @@ h1 {
   font-weight: 500;
 }
 
+h2 { 
+  margin-bottom: 0.8em;
+}
+
 h4 {
   margin-top: 1.2em;
   margin-bottom: 0.8em;
@@ -70,4 +74,8 @@ body {
  
 #toppings-box {
   margin-top: -2em;
+}
+
+#inner-comment {
+  margin-bottom: -1.5em;
 }
