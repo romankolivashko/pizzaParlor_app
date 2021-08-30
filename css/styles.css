@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 h1 {
   color: bisque;
   font-weight: 500;
@@ -28,6 +33,7 @@ body {
   font-size: 18px;
   font-weight: 600;
   color: rgb(73, 53, 29);
+  margin-bottom: 150px;
 }
 
 #show-order {
@@ -111,4 +117,6 @@ a:hover {
   width: 100%;
   font-size: 12px;
   font-weight: 300;
+  bottom: 0;
+  height: 180px;
 }
