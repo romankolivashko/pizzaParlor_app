@@ -107,7 +107,8 @@ a:hover {
 .navbar {
   background-color: transparent;
   position: absolute;
-  bottom: -5%;
   color: bisque;
   width: 100%;
+  font-size: 12px;
+  font-weight: 300;
 }
